@@ -1,9 +1,8 @@
 			model	small, c
 			.CODE
 			public 	AllocMemory
-AllocMemory	proc	near 
-			arg 	n:word, matrix:word
-			uses	ax,bx,dl,si
+AllocMemory	proc	near n:word, matrix:word
+			;uses	ax,bx,dl,si
 			
 			mov		ax,n
 			mov		bx,8
@@ -26,10 +25,9 @@ good:
 over:		mov		ax,1
 			ret		
 			
-correct:	mov		si,	mtx
+correct:	mov		si,matrix
 			mov		[si], ax
 			xor		ax,ax
-			
 			ret
 			
 			

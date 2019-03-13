@@ -8,7 +8,7 @@ int main()
 	int matrix = 0;
 	int size = 0;
 	int i,j;
-	int min = 0;
+	//int min = 0;
 	
 	printf("Enter square matrix size( 0 < n < 11):\n");
 	scanf("%d", &size);
