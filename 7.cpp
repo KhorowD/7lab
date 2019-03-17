@@ -6,7 +6,7 @@ extern "C" int AllocMemory(int size, int* matrix);
 //extern "C" int MinVal(int size, int *min, int* matrix);
 extern "C" void SetVal(int size, int i, int j, int* matrix, int element);
 extern "C" int GetVal(int size, int i, int j, int* matrix);
-//extern "C" void DeletMatrix(int* matrix);
+extern "C" void FreeMemory(int* matrix);
 int main()
 {
 	int matrix = 0;
@@ -90,6 +90,9 @@ int main()
 	
 	printf("good\n");
 	
+	FreeMemory(&matrix);
+	
+	printf("good\n");
 	
 	return 0;
 }
