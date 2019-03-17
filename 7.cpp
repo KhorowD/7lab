@@ -69,6 +69,27 @@ int main()
 	
 	printf("good\n");
 	
+	for(i = 0; i <= size-1; i++)
+	{
+		for(j = 0; j <= size-1; j++)
+		{
+			if((i==j)||(i+j==size - 1)) SetVal(size, i, j, &matrix, min);
+		}
+	}
+	
+	printf("good\n");
+	
+	for(i = 0; i < size; i++){
+
+		for(j = 0; j < size; j++)
+		{
+			printf("[%d][%d] = %d ",i+1,j+1, GetVal(size, i, j, &matrix));
+		}
+		printf("\n");
+	}
+	
+	printf("good\n");
+	
 	
 	return 0;
 }
