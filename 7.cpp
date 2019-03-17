@@ -5,7 +5,7 @@ extern "C" int AllocMemory(int size, int* matrix);
 //extern "C" int FillMatrix(int size, int* matrix);
 //extern "C" int MinVal(int size, int *min, int* matrix);
 extern "C" void SetVal(int size, int i, int j, int* matrix, int element);
-//extern "C" int GetVal(int size, int i, int j, int* matrix);
+extern "C" int GetVal(int size, int i, int j, int* matrix);
 //extern "C" void DeletMatrix(int* matrix);
 int main()
 {
@@ -29,10 +29,6 @@ int main()
 	
 	printf("%d\n",matrix);
 	
-	//FillMatrix(size, &matrix);
-	
-	//printf("good\n");
-	
 	for(i = 0; i < size; i++)
 	{
 		for(j = 0; j < size; j++)
@@ -42,7 +38,6 @@ int main()
 			printf("Element: %d",element);
 			SetVal(size, i, j, &matrix, element);
 			printf("pointer: %i,%i\n",i,j);
-			//matrix[i*size + j] = element;
 			printf("+[]\n");
 		}
 	
@@ -50,17 +45,16 @@ int main()
 	
 	printf("good\n");
 			
-	/*for(i = 0; i < size; i++){
+	for(i = 0; i < size; i++){
 
 		for(j = 0; j < size; j++)
 		{
 			printf("[%d][%d] = %d ",i+1,j+1, GetVal(size, i, j, &matrix));
-
 		}
 		printf("\n");
-	}*/		
+	}		
 	
-	
+	printf("good\n");
 	
 	
 	return 0;
