@@ -13,7 +13,7 @@ int main()
 	int size = 0;
 	int i,j;
 	int element;
-	//int min = 0;
+	int min = 0;
 	
 	printf("Enter square matrix size( 0 < n < 11):\n");
 	scanf("%d", &size);
@@ -35,7 +35,7 @@ int main()
 		{
 			printf("[%d][%d] = ",i+1,j+1);
 			scanf("%d", &element);
-			printf("Element: %d",element);
+			printf("Element: %d\n",element);
 			SetVal(size, i, j, &matrix, element);
 			printf("pointer: %i,%i\n",i,j);
 			printf("+[]\n");
@@ -52,7 +52,20 @@ int main()
 			printf("[%d][%d] = %d ",i+1,j+1, GetVal(size, i, j, &matrix));
 		}
 		printf("\n");
-	}		
+	}
+	
+	printf("good\n");
+
+	min = GetVal(size, 0, 0, &matrix);
+	
+	for(i = 1; i < size; i++)
+	{
+		if(min > GetVal(size, i, i, &matrix))
+		{
+			min = GetVal(size, i, i, &matrix);
+		}
+	}
+	printf("Min value: %d\n", min);
 	
 	printf("good\n");
 	
