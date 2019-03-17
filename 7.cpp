@@ -2,8 +2,6 @@
 #include <stdlib.h>
 
 extern "C" int AllocMemory(int size, int* matrix);
-//extern "C" int FillMatrix(int size, int* matrix);
-//extern "C" int MinVal(int size, int *min, int* matrix);
 extern "C" void SetVal(int size, int i, int j, int* matrix, int element);
 extern "C" int GetVal(int size, int i, int j, int* matrix);
 extern "C" void FreeMemory(int* matrix);
@@ -27,7 +25,6 @@ int main()
 		return 1;
 	}
 	
-	printf("%d\n",matrix);
 	
 	for(i = 0; i < size; i++)
 	{
@@ -35,16 +32,13 @@ int main()
 		{
 			printf("[%d][%d] = ",i+1,j+1);
 			scanf("%d", &element);
-			printf("Element: %d\n",element);
 			SetVal(size, i, j, &matrix, element);
-			printf("pointer: %i,%i\n",i,j);
-			printf("+[]\n");
+			printf("\n");
 		}
-	
+		printf("\n");
 	}
 	
-	printf("good\n");
-			
+
 	for(i = 0; i < size; i++){
 
 		for(j = 0; j < size; j++)
@@ -53,8 +47,6 @@ int main()
 		}
 		printf("\n");
 	}
-	
-	printf("good\n");
 
 	min = GetVal(size, 0, 0, &matrix);
 	
@@ -65,9 +57,8 @@ int main()
 			min = GetVal(size, i, i, &matrix);
 		}
 	}
-	printf("Min value: %d\n", min);
 	
-	printf("good\n");
+	printf("Min value: %d\n", min);
 	
 	for(i = 0; i <= size-1; i++)
 	{
@@ -77,8 +68,7 @@ int main()
 		}
 	}
 	
-	printf("good\n");
-	
+
 	for(i = 0; i < size; i++){
 
 		for(j = 0; j < size; j++)
@@ -88,11 +78,9 @@ int main()
 		printf("\n");
 	}
 	
-	printf("good\n");
-	
 	FreeMemory(&matrix);
 	
-	printf("good\n");
+	printf("Memory cleared\n");
 	
 	return 0;
 }

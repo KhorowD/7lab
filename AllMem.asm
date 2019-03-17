@@ -2,8 +2,7 @@
 			.CODE
 			public 	AllocMemory
 AllocMemory	proc	near n:word, matrix:word
-			;uses	ax,bx,dl,si
-			
+
 			mov		ax,n
 			mov		bx,8
 			div		bx
